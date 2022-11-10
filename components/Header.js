@@ -3,6 +3,7 @@ import Image from 'next/image'
 import {ConnectButton} from 'web3uikit'
 import Search from '../images/svg/search'
 import CoinMarketCapLogo from '../images/coinmarketcap.png'
+import Link from 'next/link'
 
 const styles = {
     navLink: `text-white flex mx-[10px]`,
@@ -19,16 +20,19 @@ const styles = {
 const Header = () => {
   return (
     <div className={styles.header}>
+      <Link href='/'>
         <Image
             alt=''
             src='https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg'
             width={220}
             height={220}
-        />
+        />      
+      </Link>
+
 <div className={styles.headerWrapper}>
         <nav className={styles.nav}>
           <div className={styles.navItem}>
-            <div className={styles.navLink}>Cryptocurrencies</div>
+            <Link href='/binanceApi/bn'><div className={styles.navLink}>Cryptocurrencies</div></Link>
             <div className={styles.badge} />
           </div>
 
@@ -47,7 +51,7 @@ const Header = () => {
           </div>
 
           <div className={styles.navItem}>
-            <div className={styles.navLink}>Portfolio</div>
+            <div className={styles.navLink}><a> Portfolio </a></div>
           </div>
 
           <div className={styles.navItem}>

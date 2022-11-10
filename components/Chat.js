@@ -33,7 +33,7 @@ const Chat = () => {
 
     useEffect(() => {
       getMessages('GUN_REF_7')
-    }, [])
+    }, [getMessages])
 
     const formattedMessagesArray = () => {
       const uniqueArray = state.messages.filter((value, index) => {
